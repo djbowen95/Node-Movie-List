@@ -1,6 +1,6 @@
 // Starter code: this is code I took from one of the BootCamp exercises.
 // It was used to demonstrate that Arrow functions do not work in an object with 'this'.
-var netflixQueue = {
+const netflixQueue = {
     queue: [
       "Mr. Nobody",
       "The Matrix",
@@ -23,6 +23,8 @@ var netflixQueue = {
     }
   };
 
+  console.log(process.argv);
+
   // Function that parses the arguments.
   // Function that runs .addMove() to a process argument.
   // Function that watches the most recent movie.
@@ -31,13 +33,13 @@ var netflixQueue = {
   // Something that returns if input isn't in the list. 
   // What do I do about full stops / punctuation? 
   
-  console.log("Printing movie queue!\n");
-  netflixQueue.printQueue();
-  netflixQueue.watchMovie();
-  console.log("\nWatched a movie!\n");
-  console.log("Printing movie queue!\n");
-  netflixQueue.printQueue();
-  console.log("\nAdding a movie!\n");
-  netflixQueue.addMovie("Black Swan");
-  console.log("Printing movie queue!\n");
-  netflixQueue.printQueue();
+//   console.log("Printing movie queue!\n");
+//   netflixQueue.printQueue();
+//   netflixQueue.watchMovie();
+//   console.log("\nWatched a movie!\n");
+//   console.log("Printing movie queue!\n");
+//   netflixQueue.printQueue();
+//   console.log("\nAdding a movie!\n");
+//   netflixQueue.addMovie("Black Swan");
+//   console.log("Printing movie queue!\n");
+//   netflixQueue.printQueue();
