@@ -1,4 +1,4 @@
-const processArguments = process.argv; // Import/store process arguments.
+const processArgv = process.argv; // Import/store process arguments.
 
 const netflixQueue = {
     queue: [
@@ -23,12 +23,18 @@ const netflixQueue = {
     }
   };
 
-const parseArgv = () => {
+const parseArgv = (argv) => {
     try {
-        console.log(processArguments[2]);
-    } catch (err) {
-        console.log("Incorrect command"); // This doesn't work, returns undefined.
+        if (argv[2] === "watch") {
+            console.log("Watch");
+        }
+        if (argv[2] === "add") {
+            console.log("Add");
+        }
+    } catch (err) { // Doesn't catch this as an error either. 
+        console.log("Caught err: ");
+        console.log(err);
     }
 }
 
-parseArgv();
+parseArgv(processArgv);
