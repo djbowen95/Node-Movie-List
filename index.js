@@ -1,5 +1,5 @@
-// Starter code: this is code I took from one of the BootCamp exercises.
-// It was used to demonstrate that Arrow functions do not work in an object with 'this'.
+const processArguments = process.argv; // Import/store process arguments.
+
 const netflixQueue = {
     queue: [
       "Mr. Nobody",
@@ -23,23 +23,12 @@ const netflixQueue = {
     }
   };
 
-  console.log(process.argv);
+const parseArgv = () => {
+    try {
+        console.log(processArguments[2]);
+    } catch (err) {
+        console.log("Incorrect command"); // This doesn't work, returns undefined.
+    }
+}
 
-  // Function that parses the arguments.
-  // Function that runs .addMove() to a process argument.
-  // Function that watches the most recent movie.
-  // Function that deletes a movie from the list based on argument.
-  // Do I want separate 'watched' and 'to watch' lists?
-  // Something that returns if input isn't in the list. 
-  // What do I do about full stops / punctuation? 
-  
-//   console.log("Printing movie queue!\n");
-//   netflixQueue.printQueue();
-//   netflixQueue.watchMovie();
-//   console.log("\nWatched a movie!\n");
-//   console.log("Printing movie queue!\n");
-//   netflixQueue.printQueue();
-//   console.log("\nAdding a movie!\n");
-//   netflixQueue.addMovie("Black Swan");
-//   console.log("Printing movie queue!\n");
-//   netflixQueue.printQueue();
+parseArgv();
